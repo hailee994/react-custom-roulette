@@ -144,7 +144,16 @@ const drawWheel = (
         ? angle + arc / 2 + Math.PI / 2
         : angle + arc / 2;
       ctx.rotate(textRotationAngle);
-      ctx.fillText(text, -ctx.measureText(text).width / 10, fontSize / 2.7);
+      // ctx.fillText(text, -ctx.measureText(text).width / 2, fontSize / 2.7);
+
+      const lineHeight = 15;
+      const lines = text.split('\n');
+
+      ctx.fillText(
+        lines[i],
+        -ctx.measureText(text).width / 2,
+        fontSize / 2.7 + i * lineHeight
+      );
       ctx.restore();
     }
   }
