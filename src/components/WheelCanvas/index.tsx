@@ -147,7 +147,7 @@ const drawWheel = (
       const arrStr = text.split('\n');
       for (let j = 0; j < arrStr.length; j++) {
         ctx.fillText(
-          arrStr[i],
+          arrStr[j],
           -ctx.measureText(text).width / 2,
           fontSize / 2.7
         );
