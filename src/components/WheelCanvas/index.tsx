@@ -70,9 +70,6 @@ const drawWheel = (
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
 
-    const xText = 50;
-    const yText = canvas.height / 50;
-
     ctx.font = `bold ${fontSize}px Helvetica, Arial`;
 
     for (let i = 0; i < data.length; i++) {
@@ -147,16 +144,15 @@ const drawWheel = (
         ? angle + arc / 2 + Math.PI / 2
         : angle + arc / 2;
       ctx.rotate(textRotationAngle);
+      // ctx.fillText(text, -ctx.measureText(text).width / 2, fontSize / 2.7);
       const arrStr = text.split('\n');
-      // for (let j = 0; j < arrStr.length; j++) {
-      //   ctx.fillText(
-      //     arrStr[j],
-      //     -ctx.measureText(text).width / 2,
-      //     fontSize / 2.7
-      //   );
-      // }
+
       for (let j = 0; j < arrStr.length; j++) {
-        ctx.fillText(arrStr[j], xText, yText);
+        ctx.fillText(
+          arrStr[j],
+          -ctx.measureText(text).width / 2,
+          fontSize / 2.7
+        );
       }
       ctx.restore();
     }

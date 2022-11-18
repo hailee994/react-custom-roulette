@@ -26,8 +26,6 @@ var drawWheel = function (canvasRef, data, drawWheelProps) {
         var insideRadius = (outsideRadius * clampedInsideRadius) / 100;
         var centerX = canvas.width / 2;
         var centerY = canvas.height / 2;
-        var xText = 50;
-        var yText = canvas.height / 50;
         ctx.font = "bold " + fontSize + "px Helvetica, Arial";
         for (var i = 0; i < data.length; i++) {
             var angle = startAngle + i * arc;
@@ -74,16 +72,10 @@ var drawWheel = function (canvasRef, data, drawWheelProps) {
                 ? angle + arc / 2 + Math.PI / 2
                 : angle + arc / 2;
             ctx.rotate(textRotationAngle);
+            // ctx.fillText(text, -ctx.measureText(text).width / 2, fontSize / 2.7);
             var arrStr = text.split('\n');
-            // for (let j = 0; j < arrStr.length; j++) {
-            //   ctx.fillText(
-            //     arrStr[j],
-            //     -ctx.measureText(text).width / 2,
-            //     fontSize / 2.7
-            //   );
-            // }
             for (var j = 0; j < arrStr.length; j++) {
-                ctx.fillText(arrStr[j], xText, yText);
+                ctx.fillText(arrStr[j], -ctx.measureText(text).width / 2, fontSize / 2.7);
             }
             ctx.restore();
         }
