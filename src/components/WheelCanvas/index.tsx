@@ -150,7 +150,7 @@ const drawWheel = (
 
       for (let j = 0; j < arrStr.length; j++) {
         ctx.fillText(arrStr[j], -ctx.measureText(text).width / 2, y);
-        y += fontSize / 2.7;
+        y += fontSize;
       }
       ctx.restore();
     }
