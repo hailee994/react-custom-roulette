@@ -77,7 +77,7 @@ var drawWheel = function (canvasRef, data, drawWheelProps) {
             var arrStr = text.split('\n');
             var y = fontSize / 2.7;
             for (var j = 0; j < arrStr.length; j++) {
-                ctx.fillText(arrStr[j], ctx.measureText(text).width / 20, y);
+                ctx.fillText(arrStr[j], ctx.measureText(text).width / 30, y);
                 y += fontSize;
             }
             ctx.restore();
