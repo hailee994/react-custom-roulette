@@ -144,6 +144,7 @@ const drawWheel = (
         ? angle + arc / 2 + Math.PI / 2
         : angle + arc / 2;
       ctx.rotate(textRotationAngle);
+      ctx.textAlign = 'center';
       // ctx.fillText(text, -ctx.measureText(text).width / 2, fontSize / 2.7);
       const arrStr = text.split('\n');
       let y = fontSize / 2.7;

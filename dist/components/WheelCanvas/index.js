@@ -72,6 +72,7 @@ var drawWheel = function (canvasRef, data, drawWheelProps) {
                 ? angle + arc / 2 + Math.PI / 2
                 : angle + arc / 2;
             ctx.rotate(textRotationAngle);
+            ctx.textAlign = 'center';
             // ctx.fillText(text, -ctx.measureText(text).width / 2, fontSize / 2.7);
             var arrStr = text.split('\n');
             var y = fontSize / 2.7;
