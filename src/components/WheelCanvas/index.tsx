@@ -146,7 +146,11 @@ const drawWheel = (
       ctx.rotate(textRotationAngle);
       const arrStr = text.split('\n');
       for (let j = 0; j < arrStr.length; j++) {
-        ctx.fillText(text, -ctx.measureText(text).width / 2, fontSize / 2.7);
+        ctx.fillText(
+          arrStr[i],
+          -ctx.measureText(text).width / 2,
+          fontSize / 2.7
+        );
       }
       ctx.restore();
     }
