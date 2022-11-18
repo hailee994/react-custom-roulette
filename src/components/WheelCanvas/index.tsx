@@ -71,7 +71,7 @@ const drawWheel = (
     const centerY = canvas.height / 2;
 
     const xText = 50;
-    const yText = canvas.height / 2;
+    const yText = canvas.height / 50;
 
     ctx.font = `bold ${fontSize}px Helvetica, Arial`;
 
