@@ -74,8 +74,10 @@ var drawWheel = function (canvasRef, data, drawWheelProps) {
             ctx.rotate(textRotationAngle);
             // ctx.fillText(text, -ctx.measureText(text).width / 2, fontSize / 2.7);
             var arrStr = text.split('\n');
+            var y = fontSize / 2.7;
             for (var j = 0; j < arrStr.length; j++) {
-                ctx.fillText(arrStr[j], -ctx.measureText(text).width / 2, fontSize / 2.7);
+                ctx.fillText(arrStr[j], -ctx.measureText(text).width / 2, y);
+                y += fontSize / 2.7;
             }
             ctx.restore();
         }
